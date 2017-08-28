@@ -12,10 +12,11 @@ RUN apt-get update \
       && mv dokuwiki-$DOKUWIKI_VERSION /var/www/html/dokuwiki \
       && chown -R www-data:www-data /var/www/html/ \
       && rm dokuwiki-$DOKUWIKI_VERSION.tgz
-	  
+
 ADD apache2.conf /etc/apache2/apache2.conf
 
 EXPOSE 80
+
 VOLUME ["/var/www/html/dokuwiki/"]
 
-CMD apache2 start
+ENTRYPOINT service apache2 start && bash
