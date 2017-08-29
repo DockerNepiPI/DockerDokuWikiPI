@@ -16,6 +16,7 @@ RUN apt-get update \
 ADD apache2.conf /etc/apache2/apache2.conf
 
 EXPOSE 80
+EXPOSE 443
 
 VOLUME ["/var/www/html/dokuwiki/"]
 
