@@ -15,9 +15,10 @@ RUN apt-get update \
 
 ADD apache2.conf /etc/apache2/apache2.conf
 
-EXPOSE 80
-EXPOSE 443
+EXPOSE 443 80
 
 VOLUME ["/var/www/html/dokuwiki/"]
 
-ENTRYPOINT service apache2 start && bash
+ADD docker-entypoint.sh /docker-entypoint.sh
+RUN chmod +x /docker-entypoint.sh
+ENTRYPOINT ["/docker-entypoint.sh"]
