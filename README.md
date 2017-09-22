@@ -1,10 +1,6 @@
 # DokuWiki Docker Image for Raspbian
 
-This docker image based on a self build [debian:stretch](https://github.com/RPi-Distro/pi-gen) image from RPi-Distro. Builds a docker container image with a DokuWiki running on Apache2 PHP server.
-
-## Prerequisite
-
-  * debian:stretch image from pi-gen.
+This docker container based on debian jessie. Builds a docker container image with a DokuWiki running on Apache2 PHP server.
 
 ## Build Container
 

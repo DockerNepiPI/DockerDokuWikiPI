@@ -1,12 +1,12 @@
 # Installation guide from https://www.dokuwiki.org/install:debian
-FROM debian:stretch
+FROM debian:jessie
 MAINTAINER Andreas Sekulski <andreas.sekulski@gmail.com>
 
 ENV DOKUWIKI_VERSION 2017-02-19e
 
 # Install all DokuWiki repositories
 RUN apt-get update \
-      && apt-get install wget php libapache2-mod-php -y \
+      && apt-get install nano wget php5 libapache2-mod-php5 -y \
       && wget http://download.dokuwiki.org/src/dokuwiki/dokuwiki-$DOKUWIKI_VERSION.tgz \
       && tar xzvf dokuwiki-$DOKUWIKI_VERSION.tgz \
       && mv dokuwiki-$DOKUWIKI_VERSION /var/www/html/dokuwiki \
