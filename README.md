@@ -2,6 +2,15 @@
 
 This docker container based on debian jessie. Builds a docker container image with a DokuWiki running on Apache2 PHP server.
 
+## Docker Hub
+
+Docker Hub image can be pulled from last release build.
+
+```
+docker pull nepitwin/pi_dokuwiki
+docker run -d -p 80:80 nepitwin/pi_dokuwiki
+```
+
 ## Build Container
 
 ```
